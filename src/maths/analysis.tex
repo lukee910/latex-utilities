@@ -1,21 +1,12 @@
 % Limits
-\newcommand{\toinf}[1]{\limits_{#1 \to \infty}}
-\newcommand{\tozero}[1]{\limits_{#1 \to 0}}
-\newcommand{\tovar}[2]{\limits_{#1 \to #2}}
-\newcommand{\tovarneq}[2]{\limits_{#1 \to #2,\ #1 \neq #2}}
+\newcommand{\limtoinf}[1]{\limits_{#1 \to \infty}}
+\newcommand{\limto}[2][0]{\limits_{#2 \to #1}}
+\newcommand{\limtoneq}[2]{\limits_{#2 \to #1,\ #2 \neq #1}}
 
 % Sequences
-\newcommand{\seq}[2]{(#1_{#2})_{#2 \geq 1}}
-\newcommand{\seqfrom}[3]{(#1_{#2})_{#2 \geq #3}}
-\newcommand{\seqin}[3]{(#1_{#2})_{#2 \in #3}}
+\newcommand{\seq}[3][1]{(#3_{#2})_{#2 \geq #1}}
+\newcommand{\seqin}[3]{(#3_{#2})_{#2 \in #1}}
 
 % Series
-% TODO
-\newcommand{\series}[2]{\sum_{#2=1}^{\infty} #1_#2}
-\newcommand{\absseries}[2]{\sum_{#2=1}^{\infty} |#1_#2|}
-
-\newcommand{\serieszero}[2]{\sum_{#2=0}^{\infty} #1_#2}
-\newcommand{\absserieszero}[2]{\sum_{#2=0}^{\infty} |#1_#2|}
-
-\newcommand{\seriesfrom}[2]{\sum_{#2=0}^{\infty} #1_#2}
-\newcommand{\absseriesfrom}[2]{\sum_{#2=0}^{\infty} |#1_#2|}
+\newcommand{\series}[3][1]{\sum_{#2=#1}^{\infty} #3_#2}
+\newcommand{\absseries}[3][1]{\sum_{#2=#1}^{\infty} \left| #3_#2 \right|}
