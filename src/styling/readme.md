@@ -1,3 +1,3 @@
 # Styling folder
 
-Any styling can be here, general or specific.
+Any styling can be here, general or specific/personalized.

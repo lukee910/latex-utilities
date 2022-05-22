@@ -1,0 +1,21 @@
+% Compact titles
+\titleformat{\part}{\normalfont\Large\bfseries}{\thepart.}{0.2em}{}
+
+\titleformat{\section}{\normalfont\large\bfseries}{\thesection.}{0.2em}{}
+\titlespacing*{\section}{0em}{1.5em}{0em}
+
+\titleformat{\subsection}{\normalfont\normalsize\bfseries}{\thesubsection.}{0.2em}{}
+\titlespacing*{\subsection}{0em}{1em}{0em}
+
+\titleformat{\subsubsection}[runin]{\normalfont\fontsize{1em}{1.2em}\bfseries}{}{0em}{}
+\titlespacing*{\subsubsection}{\parindent}{0.4em}{\wordsep}
+
+% Remove left space from default list
+\setlist[enumerate]{topsep=0pt}
+\setlist[itemize]{topsep=0pt}
+
+% Second level list indent, only for enumerate & itemize
+\setenumerate[1]{wide=0pt,labelindent=3pt,leftmargin=6pt}
+\setitemize[1]{wide=0pt,labelindent=3pt,leftmargin=6pt}
+\setenumerate[2]{wide=0pt,labelindent=6pt,leftmargin=9pt}
+\setitemize[2]{wide=0pt,labelindent=6pt,leftmargin=9pt}
