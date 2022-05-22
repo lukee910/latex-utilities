@@ -11,9 +11,9 @@ These files should be usable with `\input` to set up a document. They should _no
 Templates should include:
 
 ```latex
-% Document class
-% Packages
-% Utilites from this repo
-% Commands and definitions
-% Template styling
+% === Document class
+% === Packages
+% === Utilites from this repo
+% === Commands and definitions
+% === Template styling
 ```

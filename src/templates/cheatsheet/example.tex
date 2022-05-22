@@ -1,0 +1,42 @@
+\def\lutilpath{../..}
+
+\input{\lutilpath/templates/cheatsheet/template}
+
+\begin{document}
+
+\begin{multicols*}{3}
+
+  \part{Formulas}
+
+  \h{Math Utilites}
+  
+  \hh{Some chapter}
+  
+  \hhh{Def 1.1 Limits}
+
+  Some limit utilites:
+
+  \begin{gather*}
+    \lim\limtoinf{n} f(n) \\
+    \lim\limto{n}{0} f(n) \\
+    \lim\limtoneq{n}{n_0}
+  \end{gather*}
+  
+  \hhh{Def 1.3 Sequences}
+
+  Let $a \in \real$, $b \geq 0$ be such that this text wraps at some point.
+
+  \begin{gather*}
+    \seq[0]{a}{n} \\
+    \seqin[\real]{a}{n}
+  \end{gather*}
+
+  \hhh{Lemma 1.6 Series}
+
+  \begin{gather*}
+    \series[0]{a}{n} \\
+    \absseries[-1]{a}{n}
+  \end{gather*}
+\end{multicols*}
+
+\end{document}

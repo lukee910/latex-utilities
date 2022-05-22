@@ -1,12 +1,12 @@
 % Limits
 \newcommand{\limtoinf}[1]{\limits_{#1 \to \infty}}
-\newcommand{\limto}[2][0]{\limits_{#2 \to #1}}
-\newcommand{\limtoneq}[2]{\limits_{#2 \to #1,\ #2 \neq #1}}
+\newcommand{\limto}[2]{\limits_{#1 \to #2}}
+\newcommand{\limtoneq}[2]{\limits_{#1 \to #2,\ #1 \neq #2}}
 
 % Sequences
-\newcommand{\seq}[3][1]{(#3_{#2})_{#2 \geq #1}}
-\newcommand{\seqin}[3]{(#3_{#2})_{#2 \in #1}}
+\newcommand{\seq}[3][1]{(#2_{#3})_{#3 \geq #1}}
+\newcommand{\seqin}[3][\nat]{(#2_{#3})_{#3 \in #1}}
 
 % Series
-\newcommand{\series}[3][1]{\sum_{#2=#1}^{\infty} #3_#2}
-\newcommand{\absseries}[3][1]{\sum_{#2=#1}^{\infty} \left| #3_#2 \right|}
+\newcommand{\series}[3][1]{\sum_{#3=#1}^{\infty} #2_#3}
+\newcommand{\absseries}[3][1]{\sum_{#3=#1}^{\infty} \left| #2_#3 \right|}
