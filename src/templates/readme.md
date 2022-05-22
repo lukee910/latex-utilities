@@ -2,11 +2,9 @@
 
 ## Usage
 
-Add `\input{path/to/template}` at the very beginning of your file.
+To use a template, aadd `\input{path/to/template}` at the _very_ beginning of your file. They already include the document class.
 
-## For authors
-
-These files should be usable with `\input` to set up a document. They should _not_ be used with copy-paste, so that any change to the template can be easily used in an existing file.
+Templates shouldn't be copy-pasted. With `\input`, any updates to the templates will also be applied to any existing document.
 
 Templates should include:
 
