@@ -1,0 +1,31 @@
+\def\lutilpath{../..}
+
+\input{\lutilpath/templates/basic-summary/template}
+
+\title{Basic Summary Example}
+\author{Lukas Dörig}
+
+\begin{document}
+
+\maketitle
+
+\begin{multicols*}{2}
+  \section{Test}
+
+  This is a sentence.
+
+  \begin{mainbox}{A main box title}
+    Some main box content
+  \end{mainbox}
+
+  \begin{subbox}{A main sub title}
+    Some sub box content
+  \end{subbox}
+
+  \begin{axiom}{Title}{label}
+    Axiom content
+  \end{axiom}
+  % \thm{1.4}{Satz von Pythagoras}{This is a lemma.}
+\end{multicols*}
+
+\end{document}

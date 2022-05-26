@@ -1,0 +1,61 @@
+% Sources
+% xyquadrat: https://xyquadrat.ch/2022/04/04/latex-boxes/
+% Azurios: https://azurios.gitlab.io/posts/boxes/
+
+% === General
+
+\tcbset {
+  base/.style={
+      arc=0mm,
+      bottomtitle=0.5mm,
+      boxrule=0mm,
+      colbacktitle=black!10!white,
+      coltitle=black,
+      fonttitle=\bfseries,
+      left=2.5mm,
+      leftrule=1mm,
+      right=3.5mm,
+      title={#1},
+      toptitle=0.75mm
+    }
+}
+
+% Define colors, overridable
+
+\ifx\lutilcolbasic\undefined
+  \def\lutilcolbasic{black!30!white}
+\fi
+
+% === Basic Boxes
+
+\definecolor{brandblue}{rgb}{0.34, 0.7, 1}
+
+\newtcolorbox{mainbox}[1]{
+  colframe=brandblue,
+  base={#1}
+}
+
+\newtcolorbox{subbox}[1]{
+  colframe=\lutilcolbasic,
+  base={#1}
+}
+
+% === Theorems etc.
+
+% Axiom
+
+\newcounter{lutilaxiom}
+
+\newtcbtheorem[use counter=lutilaxiom, number within=section]{axiom}{Axiom}{
+  base={#1},
+  colframe=\lutilcolbasic,
+}{ax}
+
+% Definition
+
+\newcounter{lutildef}
+
+\newtcbtheorem[use counter=lutildef, number within=section]{definition}{Definition}{
+  base={#1},
+  colframe=\lutilcolbasic,
+}{def}

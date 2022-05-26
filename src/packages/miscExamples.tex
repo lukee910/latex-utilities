@@ -5,16 +5,34 @@
 
 This text is here to break a document if it this file was in an \input{_}.
 
+% === Typesetting, text
+
 % Typographical rules for non-english languages
 \usepackage[german]{babel}
 
+% Japanese Support
+\usepackage{CJKutf8}
+
+% === Layout, formatting, titles
+
 % Customizing page layout etc.
 \usepackage[margin=2cm]{geometry}
+
+% New line instead of indent on paragraph
+\usepackage[parfill]{parskip}
+
+% Line spacing
+\usepackage{setspace}
+
+% Headers and footers
+\usepackage{fancyhdr}
 
 % Changing counters within different parts/chapters/...
 % e.g. for separate section counters for different parts:
 % `\counterwithin*{section}{part}`
 \usepackage{chngcntr}
+
+% === Graphics
 
 % Colors, rotation, stretch, ...
 \usepackage{graphicx}
