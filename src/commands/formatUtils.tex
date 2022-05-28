@@ -6,3 +6,11 @@
 % Braces
 \newcommand{\braced}[1] {\left( #1 \right)}
 \newcommand{\curly}[1] {\left\lbrace #1 \right\rbrace}
+
+% Counters
+% Set the counter so that the next header will have the given value
+% For use before theorems, titles, etc.
+\newcommand{\setnext}[2]{
+  \setcounter{#1}{#2}
+  \addtocounter{#1}{-1}
+}

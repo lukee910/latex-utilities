@@ -9,23 +9,45 @@
 
 \maketitle
 
-\begin{multicols*}{2}
-  \section{Test}
+\section{Boxes}
 
-  This is a sentence.
+\subsection{Basic Boxes}
 
-  \begin{mainbox}{A main box title}
-    Some main box content
-  \end{mainbox}
+This is a sentence.
 
-  \begin{subbox}{A main sub title}
-    Some sub box content
-  \end{subbox}
+\begin{mainbox}{A main box title}
+  Some main box content
+\end{mainbox}
 
-  \begin{axiom}{Title}{label}
-    Axiom content
-  \end{axiom}
-  % \thm{1.4}{Satz von Pythagoras}{This is a lemma.}
-\end{multicols*}
+\begin{subbox}{A main sub title}
+  Some sub box content
+\end{subbox}
+
+\subsection{Theorems etc.}
+
+\begin{axiom}{Existence of boxes}{box}
+  These boxes exist.
+\end{axiom}
+
+\begin{definition}{Box}{box}
+  A box is a square with content.
+\end{definition}
+
+\begin{corollary}{Right angles}{rangle}
+  Boxes have right angles as corners.
+\end{corollary}
+
+\setnext{lulemma}{6}
+\begin{lemma}{Numbering lemma}{num}
+  You can set the counter, so that the lemma will have a certain number.
+\end{lemma}
+
+\begin{satz}{Pythagoras}{triangles}
+  A quadrat plus bee quadrat equals sea quadrat.
+\end{satz}
+
+\begin{theorem}{Misnomer corollary}{misnomer}
+  Theorems are never theorems and lemmas are never lemmas.
+\end{theorem}
 
 \end{document}

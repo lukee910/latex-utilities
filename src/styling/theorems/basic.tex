@@ -4,12 +4,30 @@
 
 % === General
 
+% Define colors
+% Can be overriden by a later \definecolor
+
+\definecolor{luTitleBg}{RGB}{230,230,230}
+\definecolor{luHighlightMain}{RGB}{87,178,255}
+\definecolor{luHighlightSecondary}{RGB}{183,183,183}
+
+\colorlet{luHighlightAxiom}{luHighlightMain}
+\colorlet{luHighlightDefinition}{luHighlightMain}
+\colorlet{luHighlightCorollary}{luTitleBg}
+\colorlet{luHighlightLemma}{luHighlightSecondary}
+\colorlet{luHighlightSatz}{luHighlightMain}
+\colorlet{luHighlightTheorem}{luHighlightMain}
+\colorlet{luHighlightExample}{luTitleBg}
+
+% Basic frame style
+% TODO: Naming, enable different frames?
+
 \tcbset {
   base/.style={
       arc=0mm,
       bottomtitle=0.5mm,
       boxrule=0mm,
-      colbacktitle=black!10!white,
+      colbacktitle=luTitleBg,
       coltitle=black,
       fonttitle=\bfseries,
       left=2.5mm,
@@ -20,23 +38,21 @@
     }
 }
 
-% Define colors, overridable
+% === Counters
 
-\ifx\lutilcolbasic\undefined
-  \def\lutilcolbasic{black!30!white}
-\fi
+% TODO: Easier way of adapting to differnt types of counting
 
 % === Basic Boxes
 
-\definecolor{brandblue}{rgb}{0.34, 0.7, 1}
+% TODO: Remove these?
 
 \newtcolorbox{mainbox}[1]{
-  colframe=brandblue,
+  colframe=luHighlightMain,
   base={#1}
 }
 
 \newtcolorbox{subbox}[1]{
-  colframe=\lutilcolbasic,
+  colframe=luHighlightSecondary,
   base={#1}
 }
 
@@ -44,18 +60,56 @@
 
 % Axiom
 
-\newcounter{lutilaxiom}
-
-\newtcbtheorem[use counter=lutilaxiom, number within=section]{axiom}{Axiom}{
+\newcounter{luaxiom}
+\newtcbtheorem[use counter=luaxiom, number within=section]{axiom}{Axiom}{
   base={#1},
-  colframe=\lutilcolbasic,
-}{ax}
+  colframe=luHighlightAxiom,
+}{axiom}
 
 % Definition
 
-\newcounter{lutildef}
-
-\newtcbtheorem[use counter=lutildef, number within=section]{definition}{Definition}{
+\newcounter{ludef}
+\newtcbtheorem[use counter=ludef, number within=section]{definition}{Definition}{
   base={#1},
-  colframe=\lutilcolbasic,
+  colframe=luHighlightDefinition,
 }{def}
+
+% Corollary
+
+\newcounter{lucor}
+\newtcbtheorem[use counter=lucor, number within=section]{corollary}{Corollary}{
+  base={#1},
+  colframe=luHighlightCorollary,
+}{cor}
+
+% Lemma
+
+\newcounter{lulemma}
+\newtcbtheorem[use counter=lulemma, number within=section]{lemma}{Lemma}{
+  base={#1},
+  colframe=luHighlightLemma,
+}{lemma}
+
+% Satz
+
+\newcounter{lusatz}
+\newtcbtheorem[use counter=lusatz, number within=section]{satz}{Satz}{
+  base={#1},
+  colframe=luHighlightSatz,
+}{satz}
+
+% Theorem
+
+\newcounter{luthm}
+\newtcbtheorem[use counter=luthm, number within=section]{theorem}{Theorem}{
+  base={#1},
+  colframe=luHighlightTheorem,
+}{thm}
+
+% Example
+
+\newcounter{luex}
+\newtcbtheorem[use counter=luex, number within=section]{example}{Example}{
+  base={#1},
+  colframe=luHighlightExample,
+}{ex}
