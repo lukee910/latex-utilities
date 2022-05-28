@@ -15,5 +15,5 @@ Notes:
 - `\lutilpath` must be defined before any inputs, else something might break
 - For using templates, see [the templates readme](./src/templates/readme.md)
 
-\[1\] Getting started with submodules: [official docs](https://git-scm.com/book/en/v2/Git-Tools-Submodules), [a helpful gist](https://gist.github.com/gitaarik/8735255)
+\[1\] Getting started with submodules: [official docs](https://git-scm.com/book/en/v2/Git-Tools-Submodules), [cheatsheet](https://www.devroom.io/2020/03/09/the-git-submodule-cheat-sheet/), [a helpful gist](https://gist.github.com/gitaarik/8735255)
 
