@@ -1,0 +1,35 @@
+% Available on https://gitlab.ethz.ch/bsaverio/ethbeamer
+% Created by Saverio Bolognani based on ETH official design
+
+% This file should only load themes and packages, no customization
+
+\mode<presentation>
+
+\usepackage[utf8]{inputenc}
+
+% Tizk, textpos, graphics
+\RequirePackage{tikz}
+\RequirePackage{textpos}
+\RequirePackage{xcolor}
+\RequirePackage{booktabs}
+
+% Beamer settings
+\usepackage{\lutilpath/templates/presentation/beamercolorthemeeth}
+\usepackage{\lutilpath/templates/presentation/beamerfontthemeeth}
+\usepackage{\lutilpath/templates/presentation/beamerinnerthemeeth}
+\usepackage{\lutilpath/templates/presentation/beamerouterthemeeth}
+\setbeamertemplate{navigation symbols}{}
+
+% Math
+\RequirePackage{amsmath}
+\RequirePackage{amssymb}  
+\RequirePackage{amsfonts}
+\usepackage{mathtools}	% Mathematical tools to use with amsmath
+\usepackage{mathrsfs}		% Support use of the Raph Smith’s Formal Script font in mathematics. Provides a \mathscr command
+\usepackage{mathdots}		% Redefines \ddots and \vdots, and defines \iddots. 
+\usepackage{dsfont}		% Doublestroke font 
+\usepackage{wasysym}		% Useful symbols
+\usepackage[bbgreekl]{mathbbol}
+\DeclareSymbolFontAlphabet{\mathbbl}{bbold}
+
+\mode<all>

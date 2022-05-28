@@ -1,0 +1,31 @@
+% Available on https://gitlab.ethz.ch/bsaverio/ethbeamer
+% Created by Saverio Bolognani based on ETH official design
+
+% This file should only customize fonts
+
+\usepackage[T1]{fontenc}						% for correct hyphenation and T1 encoding
+\RequirePackage{lmodern}
+\RequirePackage{tgheros}						% Helvetica
+\renewcommand{\familydefault}{\sfdefault}
+\RequirePackage{microtype}					% for character protrusion and font expansion
+\usefonttheme[onlymath]{serif}				% math like in the papers (serif)
+\urlstyle{same}
+
+% Font size of the title frame
+\setbeamerfont{title}{size=\fontsize{17}{20.4}\selectfont,series=\mdseries}
+\setbeamerfont{author}{size=\fontsize{10}{12},series=\bfseries}
+\setbeamerfont{date}{size=\fontsize{10}{12},series=\mdseries}
+
+% Font size of the frame titles and toc
+\setbeamerfont{frametitle}{size=\large}
+\setbeamerfont{framesubtitle}{size=\footnotesize}
+\setbeamerfont{section in toc}{size=\normalsize}
+
+% Font size of the slide content
+\setbeamerfont{normal text}{size=\footnotesize}
+\setbeamerfont{block title}{size=\footnotesize}
+\setbeamerfont{itemize/enumerate body}{size=\footnotesize}
+\setbeamerfont{itemize/enumerate subbody}{size=\footnotesize}
+\setbeamerfont{itemize/enumerate subsubbody}{size=\footnotesize}
+    
+\AtBeginDocument{\usebeamerfont{normal text}}

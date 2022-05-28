@@ -1,0 +1,122 @@
+% Available on https://gitlab.ethz.ch/bsaverio/ethbeamer
+% Created by Saverio Bolognani based on ETH official design
+
+% This file should only customize the style of the layout of the slides
+
+\mode<presentation>
+
+% Redefine \insertshortinstitute to allow multiple lines
+\makeatletter
+\renewcommand{\insertshortinstitute}{\beamer@shortinstitute}
+\makeatother
+
+% Title frame
+\def\titlefigure{\lutilpath/elements/eth-title-image}
+\newlength\titleboxwidth
+\setlength{\titleboxwidth}{0.43\textwidth}
+\newcommand{\titleframe}{%
+	{
+		\setbeamertemplate{background}{
+			\begin{tikzpicture}
+			\useasboundingbox (0,0) rectangle(\the\paperwidth,\the\paperheight);
+			\ifx\titlefigure\empty
+				\fill[titlebgcolor] (9.6mm,7.4mm) rectangle (\the\paperwidth-9.5mm,\the\paperheight-13mm);
+			\else
+				\node at (current page.center) [anchor=center,yshift=-3.5mm] {\includegraphics[width=\the\paperwidth-19mm]{\titlefigure}};
+			\fi
+			\node at (current page.north east) [anchor=base east, xshift=-9.5mm, yshift=-8.4mm, align=left, inner sep=0mm, font=\fontsize{5.5}{6.6}\selectfont] {
+				\insertshortinstitute
+			}; 
+			\node at (current page.north west) [anchor=south west, inner sep=0mm, xshift=9.5mm, yshift=-8.6mm] {
+				\includegraphics[height=4mm]{\lutilpath/elements/eth_logo_kurz_pos}
+			}; 
+			\end{tikzpicture}
+		}
+		\setbeamertemplate{footline}{}
+		\begin{frame}[noframenumbering]
+			\begin{tikzpicture}
+				\useasboundingbox (0,0) rectangle(\the\paperwidth,\the\paperheight);
+				\node [
+					shift={(-12mm,-2mm)},
+					fill=titlefgcolor,
+					minimum width=0.49\paperwidth,
+					minimum height=20mm,
+					anchor=west,
+					inner sep=5mm
+					] at (current page.west) {
+						\hspace*{10mm}
+			 		    \begin{minipage}{\titleboxwidth}
+				 		    \raggedright
+					        \usebeamerfont{title}\usebeamercolor[fg]{title}\inserttitle\\[3mm]
+							\usebeamerfont{author}\usebeamercolor[fg]{author}\insertauthor\\
+							\usebeamerfont{date}\usebeamercolor[fg]{date}\insertdate
+					    \end{minipage}			
+					};
+			\end{tikzpicture}
+		\end{frame}
+	}
+}
+
+% TOC frame
+\newcommand{\tocframe}{%
+    \begin{frame}
+      \frametitle{Outline}
+      \tableofcontents
+    \end{frame}
+}
+
+% Section title frame
+\AtBeginSection[]
+{
+    \begin{frame}
+      \frametitle{Outline}
+      \large
+      \tableofcontents[currentsection] 
+    \end{frame}
+}
+
+\newenvironment{closingframe}{
+	\setbeamertemplate{background}{
+		\begin{tikzpicture}
+		\useasboundingbox (0,0) rectangle(\the\paperwidth,\the\paperheight);
+		\node at (current page.north west) [anchor=base west, xshift=8mm, yshift=-10mm, align=left] {
+			\includegraphics[width=23mm]{\lutilpath/elements/eth_logo_kurz_pos}
+		}; 
+		\end{tikzpicture}
+	}
+	\setbeamertemplate{footline}{}
+	\addtolength{\headsep}{10mm}
+	\begin{frame}[noframenumbering]
+}%
+{
+	\end{frame}
+}%
+
+% Frame title
+\setbeamertemplate{frametitle}{
+	\vspace{2mm}
+	\insertframetitle \\
+	\usebeamerfont{framesubtitle}\insertframesubtitle
+	\vspace{2.5mm}
+}
+
+% Footline
+\setbeamertemplate{footline}{
+	\leavevmode%
+	\hspace{9mm}
+%	\raisebox{-0.1mm}{\includegraphics[width=13mm]{elements/eth_logo_kurz_pos}}
+	\includegraphics[width=13mm,trim=0mm 0.3mm 0mm 0mm]{\lutilpath/elements/eth_logo_kurz_pos}
+	\hspace{4.5mm}
+	\parbox[b]{25mm}{
+		\fontsize{3.2}{3.5}\selectfont 
+		\insertshortinstitute
+   	}
+	\hfill
+	\insertshortdate
+	\hspace{3mm}
+	\insertframenumber/\inserttotalframenumber
+	\hspace{9mm}
+	\vspace{3mm}
+}
+
+\mode<all>

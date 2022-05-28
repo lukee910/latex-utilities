@@ -1,0 +1,26 @@
+% Available on https://gitlab.ethz.ch/bsaverio/ethbeamer
+% Created by Saverio Bolognani based on ETH official design
+
+% This file should only customize the style of the content of the slides
+
+\mode<presentation>
+
+% Links and email addresses
+\usepackage{fontawesome}
+\let\orighref\href
+\renewcommand{\href}[2]{\orighref{#1}{#2~\raisebox{-0.05\baselineskip}{\faExternalLink}}}
+
+\newcommand{\email}[1]{
+	\orighref{mailto:#1}{#1}
+}
+
+% Items
+\setbeamertemplate{items}[circle]
+\setbeamertemplate{itemize subitem}{\bf --}
+\setbeamertemplate{itemize subsubitem}[triangle]
+\setbeamertemplate{enumerate items}[default]
+
+% Table of contents
+\setbeamertemplate{section in toc}[sections numbered]
+
+\mode<all>
