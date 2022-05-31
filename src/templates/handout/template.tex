@@ -16,7 +16,8 @@
 \usepackage{xcolor}
 
 % === Utilites from this repo
-\input{\lutilpath/all}
+\newcommand{\utilpath}{\currfiledir../..}
+\RequirePackage{\utilpath/all}
 
 % === Commands, definitions, etc.
 
@@ -26,8 +27,8 @@
 \pagestyle{fancy}
 
 % Include ETH logo in header
-\lhead{\includegraphics[height=4mm]{\lutilpath/elements/eth_logo_kurz_pos}}
+\lhead{\includegraphics[height=4mm]{\utilpath/elements/eth_logo_kurz_pos}}
 
 % === Template styling
 
-\input{\lutilpath/styling/basicTitle}
+\RequirePackage{\utilpath/styling/basicTitle}
