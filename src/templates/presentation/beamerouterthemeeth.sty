@@ -11,7 +11,7 @@
 \makeatother
 
 % Title frame
-\def\titlefigure{\lutilpath/elements/eth-title-image}
+\def\titlefigure{\lutilpath/resources/eth-title-image}
 \newlength\titleboxwidth
 \setlength{\titleboxwidth}{0.43\textwidth}
 \newcommand{\titleframe}{%
@@ -28,7 +28,7 @@
 				\insertshortinstitute
 			}; 
 			\node at (current page.north west) [anchor=south west, inner sep=0mm, xshift=9.5mm, yshift=-8.6mm] {
-				\includegraphics[height=4mm]{\lutilpath/elements/eth_logo_kurz_pos}
+				\includegraphics[height=4mm]{\lutilpath/resources/eth_logo_kurz_pos}
 			}; 
 			\end{tikzpicture}
 		}
@@ -80,7 +80,7 @@
 		\begin{tikzpicture}
 		\useasboundingbox (0,0) rectangle(\the\paperwidth,\the\paperheight);
 		\node at (current page.north west) [anchor=base west, xshift=8mm, yshift=-10mm, align=left] {
-			\includegraphics[width=23mm]{\lutilpath/elements/eth_logo_kurz_pos}
+			\includegraphics[width=23mm]{\lutilpath/resources/eth_logo_kurz_pos}
 		}; 
 		\end{tikzpicture}
 	}
@@ -105,7 +105,7 @@
 	\leavevmode%
 	\hspace{9mm}
 %	\raisebox{-0.1mm}{\includegraphics[width=13mm]{elements/eth_logo_kurz_pos}}
-	\includegraphics[width=13mm,trim=0mm 0.3mm 0mm 0mm]{\lutilpath/elements/eth_logo_kurz_pos}
+	\includegraphics[width=13mm,trim=0mm 0.3mm 0mm 0mm]{\lutilpath/resources/eth_logo_kurz_pos}
 	\hspace{4.5mm}
 	\parbox[b]{25mm}{
 		\fontsize{3.2}{3.5}\selectfont 
