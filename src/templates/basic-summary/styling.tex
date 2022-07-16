@@ -1,2 +1,8 @@
 % Theorems
 \input{\lutilpath/styling/theorems/basic}
+
+% No parindent, but enable using indent manuall
+\newlength\tindent
+\setlength{\tindent}{\parindent}
+\setlength{\parindent}{0pt}
+\renewcommand{\indent}{\hspace*{\tindent}} % Usage: "\indent This paragraph will be indented."
