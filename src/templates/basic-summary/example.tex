@@ -29,16 +29,21 @@ This is a sentence.
   These boxes exist.
 \end{axiom}
 
-\begin{definition}{Box}{box}
-  A box is a square with content.
+\begin{definition}{Spaced equation}{spaced-equation}
+  This is a well spaced multiline equation. Compare this to this text.
+  \begin{align*}
+    \prob{X = x} & := 0.5 \cdot \text{Coinflip} \\
+    \expect{X}   & = 259.58
+  \end{align*}
+  There's also text after it.
 \end{definition}
 
 \begin{corollary}{Maths}{maths}
   Let $a \in \real,\ b \in \real$.
-
   \[
     a \geq b \Rightarrow a - b \geq 0
   \]
+  Here's some text after the equation.
 \end{corollary}
 
 \setnext{lulemma}{6}
