@@ -8,35 +8,62 @@
 
   \part{Formulas}
 
-  \h{Math Utilites}
-  
-  \hh{Some chapter}
-  
-  \hhh{Def 1.1 Limits}
+  \h{Boxes}
 
-  Some limit utilites:
+  \hh{Basic Boxes}
 
-  \begin{gather*}
-    \lim\limtoinf{n} f(n) \\
-    \lim\limto{n}{0} f(n) \\
-    \lim\limtoneq{n}{n_0}
-  \end{gather*}
-  
-  \hhh{Def 1.3 Sequences}
+  This is a sentence.
 
-  Let $a \in \real$, $b \geq 0$ be such that this text wraps at some point.
+  \begin{mainbox}{A main box title}
+    Some main box content
+  \end{mainbox}
 
-  \begin{gather*}
-    \seq[0]{a}{n} \\
-    \seqin[\real]{a}{n}
-  \end{gather*}
+  \begin{subbox}{A main sub title}
+    Some sub box content
+  \end{subbox}
 
-  \hhh{Lemma 1.6 Series}
+  \hh{Theorems etc.}
 
-  \begin{gather*}
-    \series[0]{a}{n} \\
-    \absseries[-1]{a}{n}
-  \end{gather*}
+  \begin{axiom}{Existence of boxes}{box}
+    These boxes exist.
+  \end{axiom}
+
+  \begin{definition}{Box}{box}
+    A box is a square with content.
+  \end{definition}
+
+  \begin{corollary}{Maths}{maths}
+    Let $a \in \real,\ b \in \real$.
+
+    \[
+      a \geq b \Rightarrow a - b \geq 0
+    \]
+  \end{corollary}
+
+  \setnext{lulemma}{6}
+  \begin{lemma}{Numbering lemma}{num}
+    You can set the counter, so that the lemma will have a certain number.
+  \end{lemma}
+
+  \begin{satz}{Pythagoras}{triangles}
+    A quadrat plus bee quadrat = sea quadrat.
+  \end{satz}
+
+  \begin{theorem}{Misnomer corollary}{misnomer}
+    Theorems are never theorems and lemmas are never lemmas.
+  \end{theorem}
+
+  \hh{Counting}
+
+  \begin{axiom}{Counting}{count}
+    Latex can count from 1.1 to 1.2.
+  \end{axiom}
+
+  \h{References}
+
+  \begin{corollary}{References}{ref}
+    You can reference stuff. E.g. definition \ref{def:box} with the title \nameref{def:box}.
+  \end{corollary}
 
 \end{multicols*}
 
