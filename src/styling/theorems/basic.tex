@@ -17,6 +17,7 @@
 \colorlet{luHighlightSatz}{luHighlightMain}
 \colorlet{luHighlightTheorem}{luHighlightMain}
 \colorlet{luHighlightExample}{luTitleBg}
+\colorlet{luHighlightRemark}{luTitleBg}
 
 % Basic frame style
 % TODO: Naming, enable different frames?
@@ -112,3 +113,11 @@
   base={#1},
   colframe=luHighlightExample,
 }{ex}
+
+% Remark
+
+\newcounter{lurem}
+\newtcbtheorem[use counter=lurem, number within=section]{remark}{Remark}{
+  base={#1},
+  colframe=luHighlightRemark,
+}{remark}

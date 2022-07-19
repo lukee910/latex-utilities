@@ -36,6 +36,10 @@
     These boxes exist.
   \end{axiom}
 
+  \begin{remark}{Reference ids}{box}
+    This is to demonstrate that reference IDs can be the same for different types.
+  \end{remark}
+
   \begin{definition}{Spaced equation}{spaced-equation}
     This is a well spaced multiline equation. Compare this to this text.
     \begin{align*}
@@ -75,7 +79,8 @@
   \h{References}
 
   \begin{corollary}{References}{ref}
-    You can reference stuff. E.g. definition \ref{def:box} with the title \nameref{def:box}.
+    You can reference stuff. E.g. remark \ref{remark:box} with the title \nameref{remark:box}. \\
+    Different types have different ids. So you could also reference axiom \ref{axiom:box} \nameref{axiom:box}.
   \end{corollary}
 
 \end{multicols*}
