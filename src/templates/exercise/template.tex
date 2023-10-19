@@ -10,6 +10,8 @@
 
 % for correct hyphenation
 \RequirePackage{lmodern}
+% CU Bright font
+\RequirePackage{cmbright}
 
 \usepackage{xcolor}
 
@@ -18,9 +20,13 @@
 
 % === Commands, definitions, etc.
 
+\renewcommand{\familydefault}{\sfdefault}
+
+% Fix headhight issues
+\setlength{\headheight}{13pt}
+
 % All pages have headers and footers
 \pagestyle{fancy}
 
 % === Template styling
-
-\input{\lutilpath/styling/basicTitle}
+\input{\lutilpath/templates/basic-summary/styling}
